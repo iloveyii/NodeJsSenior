@@ -33,7 +33,7 @@ CRUD operations for customers (get, update, delete) by id or email;
 - Logout
 - GetNewToken
   
-![auth-screenshot](public/Auth.jpg)
+![auth-screenshot](public/auth.jpg)
 
 ## User
 
@@ -44,4 +44,4 @@ CRUD operations for customers (get, update, delete) by id or email;
 - ReadAllUsers
 - GetActivationCode
 
-![user-screenshot](public/User.jpg)
+![user-screenshot](public/user.jpg)
