@@ -1,0 +1,81 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateUserInput {
+  active: Boolean
+  email: String!
+  password: String!
+  roles: String
+  username: String!
+}
+
+input LoginInput {
+  email: String!
+  password: String!
+}
+
+type LoginResponse {
+  accessToken: String!
+  refreshToken: String!
+  user: User!
+}
+
+type LogoutResponse {
+  logOut: Boolean!
+}
+
+type Mutation {
+  activate_user_account(code: String!): UserResponse!
+  create_user(createUserInput: CreateUserInput!): UserResponse!
+  delete_user(id: Int!): UserResponse!
+  getNewTokens: RefreshTokenResponse!
+  get_activation_code(id: Int!): UserResponse!
+  login(loginInput: LoginInput!): LoginResponse!
+  logout(id: Int!): LogoutResponse!
+  signup(signUpInput: SignUpInput!): LoginResponse!
+  update_user(updateUserInput: UpdateUserInput!): UserResponse!
+}
+
+type Query {
+  get_user(id: Int!): UserResponse!
+  get_users: UserResponse!
+}
+
+type RefreshTokenResponse {
+  accessToken: String!
+  refreshToken: String!
+}
+
+input SignUpInput {
+  email: String!
+  password: String!
+  roles: String!
+  username: String!
+}
+
+input UpdateUserInput {
+  active: Boolean
+  email: String
+  id: Int!
+  password: String
+  roles: String
+  username: String
+}
+
+type User {
+  active: Boolean
+  email: String!
+
+  """The ID field (placeholder)"""
+  id: Int!
+  roles: String
+  username: String!
+}
+
+type UserResponse {
+  message: String!
+  status: Boolean!
+  user: User
+  users: [User!]
+}
