@@ -43,5 +43,6 @@ CRUD operations for customers (get, update, delete) by id or email;
 - DeleteUser
 - ReadAllUsers
 - GetActivationCode
+- ActivateUserAccount
 
 ![user-screenshot](public/User.jpg)
